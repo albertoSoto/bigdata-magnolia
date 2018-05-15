@@ -1,0 +1,5 @@
+'r-consoleOutputField': 
+  'definitionClass': 'com.albertosoto.magnolia.bigdata.field.definition.ConsoleOutputFieldDefinition'
+  'factoryClass': 'com.albertosoto.magnolia.bigdata.field.factory.ConsoleOutputFieldFactory'
+
+

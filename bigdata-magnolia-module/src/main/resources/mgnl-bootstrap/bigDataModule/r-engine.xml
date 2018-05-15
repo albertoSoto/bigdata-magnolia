@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="jcr:root">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>rep:root</sv:value>
+  </sv:property>
+  <sv:node sv:name="Hello-world">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>r-engine</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>cef31d13-3243-4fca-b905-2875c3103870</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-07T19:31:11.259+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-11T14:30:59.078+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>print(sample(1:3))
+print(sample(1:3, size=3, replace=FALSE))  # same as previous line
+print(sample(c(2,5,3), size=4, replace=TRUE))
+print(sample(1:2, size=10, prob=c(1,3), replace=TRUE))</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="Hello-world-complex">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>r-engine</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>70b3b31f-9d49-405a-95a0-5c898691ee59</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-08T07:38:30.018+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-11T14:30:59.079+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>#Uses dataframes
+df &lt;- data.frame(x=1:10, y=(1:10)+rnorm(n=10))
+print(df)
+print(lm(y ~ x, df))</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="Group-by-example">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>r-engine</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>c5d57a24-b099-42b8-8303-baa50d64602b</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-08T06:42:09.566+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-11T14:30:59.079+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>numbers &lt;- c(4,23,4,23,5,43,54,56,657,67,67,435,453,435,324,34,456,56,567,65,34,435);
+print(numbers);
+#count items
+a &lt;- table(numbers);
+print(a);
+#get One item
+print(a[names(a)==435]);
+#export as dataframe
+table &lt;- as.data.frame(table(numbers));
+print(table);</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="LinceIntegration">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>51eda2fa-364b-4882-a6f1-b73e5d846d7e</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-08T06:42:46.195+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-11T14:30:59.079+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:node sv:name="Dummy-Lince">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>r-engine</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>1d416788-d798-4435-85a2-9658b4dea451</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2018-05-08T06:40:46.987+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2018-05-11T14:30:59.079+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="text" sv:type="String">
+        <sv:value># Title     : Utilities with part of R code around list and data
+# Objective : Expose and know whow data can be exposed from java to R
+# Created by: Alberto Soto Fernandez
+# Created on: 21/08/2017
+
+# Como se genera una matriz y se modifica en R
+# ============================================
+m &lt;- matrix(1:4, 2); # genera una secuencia
+m[1, 2]&lt;-10;   # fila 1 columna 2
+print(m);
+
+
+# Ejemplo a exposicion
+#print(lince);
+#print(lince[1,2]);
+#print(lince[1,'name']);
+
+# Como lo integramos
+# ------------------
+# StringMatrixBuilder data = new StringMatrixBuilder(2,2);
+# data.setValue(0,0,"yuhu");
+# data.setValue(0,1,3);
+# data.setValue(1,0,"yuhu2");
+# data.setValue(1,1,4);
+# List&lt;String&gt; colNames = new ArrayList&lt;&gt;();
+# colNames.add("name");
+# colNames.add("value");
+# data.setColNames(colNames);
+# engine.put("lince",data.build());</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="LinceData-Management">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>r-engine</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>c7e0f55e-ff62-4e04-8906-ab638fc41709</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2018-05-08T06:44:00.039+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2018-05-11T14:30:59.079+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="text" sv:type="String">
+        <sv:value>a &lt;- as.data.frame(table(linceDataByCategory));
+print(a);
+#count items: a &lt;- table(numbers);
+#get One item: print(a[names(a)==435]);
+#export as dataframe: table &lt;- as.data.frame(table(numbers));
+#http://www.r-tutor.com/r-introduction/data-frame
+#print(mtcars);
+
+#obtener el maximo de las frecuencias del registro de visualización
+print(a[which.max(a$Freq), ]);
+a[ , grepl( "C" , names( a ) ) ]</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="Function-Examples">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>91c9fefa-d7d3-4eff-abbb-add5fa9aa7c2</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-08T06:45:16.546+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-11T14:30:59.080+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:node sv:name="Function-Example-Square">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>r-engine</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>5e6178aa-829f-4590-99c6-b298e8a2e3a6</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2018-05-08T06:41:30.930+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2018-05-11T14:30:59.080+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="text" sv:type="String">
+        <sv:value>Square &lt;- function(x) {
+  return(x^2)
+}
+
+print(Square(16))</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="Function-countdown">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>r-engine</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>cc042777-0347-4d0c-811c-0e0ac76c642c</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2018-05-08T06:45:45.759+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2018-05-11T14:30:59.080+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="text" sv:type="String">
+        <sv:value>countdown &lt;- function(from)
+{
+  print(from)
+  while(from!=0)
+  {
+    Sys.sleep(1)
+    from &lt;- from - 1
+    print(from)
+  }
+}
+
+countdown(5)</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="Random-matrix-example">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>r-engine</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>494c499b-77a6-4d26-ad4a-2aeb140639ff</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-11T18:32:17.868+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-11T18:32:17.868+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>#Integer version
+mat1 &lt;- matrix(sample.int(15, 9*100, TRUE), 9, 50)
+print(mat1)
+
+#Example 1
+#print(matrix(rexp(200), 10))
+#Example 2
+#print(matrix(rexp(200, rate=.1), ncol=20))
+#Example 3
+#mat &lt;- matrix(data = rexp(200, rate = 10), nrow = 10, ncol = 20)
+#print(mat)</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="Json-example">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>r-engine</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>1454e8a4-8ea2-41c8-9c2f-f0d4d0e74e8f</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-15T11:59:59.669+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-15T12:38:57.574+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>#The last version of renjin does not fully support it
+# Check the status at 
+# http://packages.renjin.org/package/org.renjin.cran/jsonlite/1.5
+library('org.renjin.cran:jsonlite')
+hadley_orgs &lt;- fromJSON("https://api.github.com/users/hadley/orgs")
+print(hadley_orgs)</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="Flight-data-from-munich-dynamic-library-loading-example">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>r-engine</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>61c95c10-6758-4d4f-aec4-759cb787fcb5</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-15T12:20:22.568+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-15T12:22:18.648+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>#http://packages.renjin.org/package/org.renjin.cran/MUCflights
+library('org.renjin.cran:MUCflights')
+data("airports", package = "MUCflights")
+head(airports)
+flight.info &lt;- flights(from = "2011-01-07", to = "2011-01-08")
+head(flight.info)
+print(flight.info)</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
+

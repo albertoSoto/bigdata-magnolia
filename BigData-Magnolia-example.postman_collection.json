@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "74c02e46-c19d-4f7c-81f6-b005d4e27504",
+		"name": "BigData-Magnolia-example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Magnolia Rest point",
+			"description": "",
+			"item": [
+				{
+					"name": "EndpointApi - R Commands",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "superuser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "superuser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/.rest/r-engine/v1/getScripts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								".rest",
+								"r-engine",
+								"v1",
+								"getScripts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EndpointApi - R Execute",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "superuser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "superuser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/.rest/r-engine/v1/execute/Hello-world",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								".rest",
+								"r-engine",
+								"v1",
+								"execute",
+								"Hello-world"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Spring Rest inside Magnolia",
+			"description": "",
+			"item": [
+				{
+					"name": "Spring MVC - Stats",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "superuser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "superuser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/rest/v1/stats/example",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"stats",
+								"example"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Spring MVC - R Commands",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "superuser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "superuser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/rest/v1/actions/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"actions",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Spring MVC - R Commands XML",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "superuser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "superuser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/rest/v1/actions/list-xml",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"actions",
+								"list-xml"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Spring MVC - R Execute",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "superuser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "superuser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/rest/v1/actions/execute/Hello-world",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"actions",
+								"execute",
+								"Hello-world"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Spring MVC - R Execute XML",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "superuser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "superuser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/rest/v1/actions/execute-xml/Hello-world",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"actions",
+								"execute-xml",
+								"Hello-world"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Spring MVC - R Execute Complex",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "superuser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "superuser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/rest/v1/actions/execute/Hello-world-complex",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"actions",
+								"execute",
+								"Hello-world-complex"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d59f536e-4161-4809-b444-78b893058490",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "3f93f4e1-287c-45d1-a771-c54f8a562ffa",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

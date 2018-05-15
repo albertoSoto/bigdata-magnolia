@@ -1,0 +1,17 @@
+target
+*.iml
+*.ipr
+*.iws
+*.log
+.idea
+.project
+.classpath
+.settings
+.checkstyle
+.DS_Store
+
+# /magnolia-blossom-sample-webapp/
+/magnolia-blossom-sample-webapp/overlays
+overlays
+/MgnlRestPointExample.txt
+/bigdata-magnolia-module/src/main/resources/bigDataModule/webresources/node_modules

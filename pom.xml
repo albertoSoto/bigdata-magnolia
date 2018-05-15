@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>info.magnolia.maven.poms</groupId>
+        <artifactId>magnolia-parent-pom-community</artifactId>
+        <version>34</version>
+    </parent>
+    <groupId>com.albertosoto.magnolia.bigdata</groupId>
+    <artifactId>bigdata-magnolia</artifactId>
+    <name>bigdata-magnolia (parent pom)</name>
+    <version>3.2.2-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <properties>
+        <javaVersion>1.8</javaVersion>
+        <magnoliaVersion>5.6</magnoliaVersion>
+        <damVersion>2.3</damVersion>
+        <siteVersion>1.2</siteVersion>
+        <imagingVersion>3.4</imagingVersion>
+        <springVersion>4.2.5.RELEASE</springVersion>
+        <blossomVersion>3.2.1</blossomVersion>
+        <git-repo>github.com/albertoSoto/bigdata-magnolia</git-repo>
+    </properties>
+
+    <!-- Fill the following in, so you can use the release plugin -->
+    <scm>
+        <connection>scm:git:ssh://git@github.com/albertoSoto/bigdata-magnolia</connection>
+        <developerConnection>scm:git:ssh://git@github.com/albertoSoto/bigdata-magnolia</developerConnection>
+        <url>https://github.com/albertoSoto/bigdata-magnolia</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>info.magnolia</groupId>
+                <artifactId>magnolia-empty-webapp</artifactId>
+                <version>${magnoliaVersion}</version>
+                <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>info.magnolia</groupId>
+                <artifactId>magnolia-empty-webapp</artifactId>
+                <version>${magnoliaVersion}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${javaVersion}</source>
+                    <target>${javaVersion}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <!-- default resources configuration which will filter your module descriptors -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>META-INF/magnolia/*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>magnolia.public</id>
+            <url>https://nexus.magnolia-cms.com/content/groups/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>vaadin-addons</id>
+            <url>http://maven.vaadin.com/vaadin-addons</url>
+        </repository>
+        <!-- IF YOU NEED MODULES FROM THE ENTERPRISE VERSION, UNCOMMENT THE FOLLOWING REPOSITORY -->
+        <!--
+        <repository>
+          <id>magnolia.enterprise.releases</id>
+          <url>http://nexus.magnolia-cms.com/content/repositories/magnolia.enterprise.releases</url>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        -->
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>magnolia.nexus.public</id>
+            <url>https://nexus.magnolia-cms.com/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <modules>
+        <module>bigdata-magnolia-module</module>
+        <module>bigdata-magnolia-webapp</module>
+    </modules>
+</project>

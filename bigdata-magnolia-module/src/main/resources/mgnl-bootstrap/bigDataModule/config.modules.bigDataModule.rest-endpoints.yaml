@@ -1,0 +1,10 @@
+'rest-endpoints': 
+  jcr:primaryType: 'mgnl:content'
+  'demo': 
+    'class': 'info.magnolia.rest.registry.ConfiguredEndpointDefinition'
+    'implementationClass': 'com.albertosoto.magnolia.bigdata.restpoints.v1.DemoEndPoint'
+  'rengine':
+    'class': 'info.magnolia.rest.registry.ConfiguredEndpointDefinition'
+    'implementationClass': 'com.albertosoto.magnolia.bigdata.restpoints.v1.RengineEndPoint'
+
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module SYSTEM "module.dtd" >
+<module>
+    <name>bigDataModule</name>
+    <displayName>BigData Magnolia Module</displayName>
+    <description>BigData Magnolia Module - Retos Digitales 2018</description>
+    <class>com.albertosoto.magnolia.bigdata.BigDataMagnoliaModule</class>
+    <versionHandler>com.albertosoto.magnolia.bigdata.setup.BigDataMagnoliaModuleVersionHandler</versionHandler>
+    <version>${project.version}</version>
+    <components>
+        <id>app-r-engine-console</id>
+        <component>
+            <type>com.albertosoto.magnolia.bigdata.console.RengineConsoleSubApp</type>
+            <implementation>com.albertosoto.magnolia.bigdata.console.RengineConsoleSubApp</implementation>
+        </component>
+        <component>
+            <type>com.albertosoto.magnolia.bigdata.console.RengineConsoleView</type>
+            <implementation>com.albertosoto.magnolia.bigdata.console.RengineConsoleViewImpl</implementation>
+        </component>
+    </components>
+    <dependencies>
+        <dependency>
+            <name>core</name>
+            <version>${magnoliaVersion}/*</version>
+        </dependency>
+        <dependency>
+            <name>rendering</name>
+            <version>${magnoliaVersion}/*</version>
+        </dependency>
+        <dependency>
+            <name>templating</name>
+            <version>${magnoliaVersion}/*</version>
+        </dependency>
+        <dependency>
+            <name>templating-jsp</name>
+            <version>${magnoliaVersion}/*</version>
+        </dependency>
+        <dependency>
+            <name>groovy</name>
+            <version>2.6/*</version>
+        </dependency>
+        <dependency>
+            <name>blossom</name>
+            <version>${blossomVersion}/*</version>
+        </dependency>
+    </dependencies>
+    <servlets>
+        <servlet>
+            <name>SpringBigDataDispatcherService</name>
+            <class>org.springframework.web.servlet.DispatcherServlet</class>
+            <mappings>
+                <mapping>/api/rest/v1/*</mapping>
+            </mappings>
+            <params>
+                <param>
+                    <name>contextConfigLocation</name>
+                    <value>classpath:/springmvc-dispatcher-servlet.xml</value>
+                </param>
+            </params>
+        </servlet>
+    </servlets>
+    <repositories>
+        <repository>
+            <name>magnolia</name>
+            <workspaces>
+                <workspace>r-engine</workspace>
+            </workspaces>
+            <nodeTypeFile>/mgnl-nodetypes/bigdata-magnolia-nodetypes.xml</nodeTypeFile>
+        </repository>
+    </repositories>
+</module>

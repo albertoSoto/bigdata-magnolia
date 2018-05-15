@@ -1,0 +1,232 @@
+'r-engine': 
+  'appClass': 'com.albertosoto.magnolia.bigdata.console.RengineApp'
+  'class': 'info.magnolia.ui.api.app.registry.ConfiguredAppDescriptor'
+  'icon': 'icon-i-beacon'
+  'subApps': 
+    'browser': 
+      'class': 'info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor'
+      'subAppClass': 'info.magnolia.ui.contentapp.browser.BrowserSubApp'
+      'contentConnector': 
+        'defaultOrder': 'jcrName'
+        'includeProperties': false
+        'rootPath': '/'
+        'workspace': 'r-engine'
+        'nodeTypes': 
+          'mainNodeType': 
+            'icon': 'icon-node-content'
+            'name': 'r-engine'
+            'strict': true
+          'folderNodeType': 
+            'icon': 'icon-folder-l'
+            'name': 'mgnl:folder'
+            'strict': true
+      'workbench': 
+        'dropConstraintClass': 'info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint'
+        'editable': true
+        'contentViews': 
+          'tree': 
+            'class': 'info.magnolia.ui.workbench.tree.TreePresenterDefinition'
+            'columns': 
+              'jcrName': 
+                'class': 'info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition'
+                'propertyName': 'jcrName'
+                'sortable': true
+              'status': 
+                'class': 'info.magnolia.ui.workbench.column.definition.StatusColumnDefinition'
+                'displayInChooseDialog': false
+                'formatterClass': 'info.magnolia.ui.workbench.column.StatusColumnFormatter'
+                'sortable': true
+                'width': '45'
+              'moddate': 
+                'class': 'info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition'
+                'displayInChooseDialog': false
+                'formatterClass': 'info.magnolia.ui.workbench.column.DateColumnFormatter'
+                'propertyName': 'mgnl:lastModified'
+                'sortable': true
+                'width': '160'
+      'actions': 
+        'addFolder': 
+          'class': 'info.magnolia.ui.framework.action.AddFolderActionDefinition'
+          'icon': 'icon-add-folder'
+          'availability': 
+            'root': true
+            'writePermissionRequired': true
+            'nodeTypes': 
+              'folder': 'mgnl:folder'
+            'rules': 
+              'IsNotDeletedRule': 
+                'implementationClass': 'info.magnolia.ui.framework.availability.IsNotDeletedRule'
+        'editFolder': 
+          'class': 'info.magnolia.ui.framework.action.OpenEditDialogActionDefinition'
+          'dialogName': 'ui-framework:folder'
+          'icon': 'icon-edit'
+          'availability': 
+            'extends': '../../addFolder/availability'
+        'addR-engine': 
+          'appName': 'r-engine'
+          'class': 'info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition'
+          'icon': 'icon-add-item'
+          'nodeType': 'r-engine'
+          'subAppId': 'detail'
+          'availability': 
+            'root': true
+            'writePermissionRequired': true
+            'nodeTypes': 
+              'folder': 'mgnl:folder'
+            'rules': 
+              'IsNotDeletedRule': 
+                'implementationClass': 'info.magnolia.ui.framework.availability.IsNotDeletedRule'
+        'editR-engine': 
+          'appName': 'r-engine'
+          'class': 'info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition'
+          'icon': 'icon-edit'
+          'subAppId': 'detail'
+          'availability': 
+            'writePermissionRequired': true
+            'nodeTypes': 
+              'r-engine': 'r-engine'
+            'rules': 
+              'extends': '../../../addR-engine/availability/rules'
+        'renameR-engine': 
+          'class': 'info.magnolia.ui.framework.action.OpenEditDialogActionDefinition'
+          'dialogName': 'ui-framework:folder'
+          'icon': 'icon-edit'
+          'availability': 
+            'extends': '../../editR-engine/availability'
+        'delete': 
+          'asynchronous': true
+          'class': 'info.magnolia.ui.framework.action.MarkNodeAsDeletedActionDefinition'
+          'command': 'markAsDeleted'
+          'icon': 'icon-delete'
+          'availability': 
+            'writePermissionRequired': true
+            'rules': 
+              'IsNotDeletedRule': 
+                'implementationClass': 'info.magnolia.ui.framework.availability.IsNotDeletedRule'
+        'activate': 
+          'catalog': 'versioned'
+          'class': 'info.magnolia.ui.framework.action.ActivationActionDefinition'
+          'command': 'activate'
+          'icon': 'icon-publish'
+          'availability': 
+            'writePermissionRequired': true
+        'activateRecursive': 
+          'extends': '../activate'
+          'icon': 'icon-publish-incl-sub'
+          'recursive': true
+          'availability': 
+            'rules': 
+              'IsNotDeletedRule': 
+                'implementationClass': 'info.magnolia.ui.framework.availability.IsNotDeletedRule'
+        'deactivate': 
+          'command': 'deactivate'
+          'extends': '../activate'
+          'icon': 'icon-unpublish'
+          'availability': 
+            'rules': 
+              'IsNotDeletedRule': 
+                'implementationClass': 'info.magnolia.ui.framework.availability.IsNotDeletedRule'
+        'export': 
+          'class': 'info.magnolia.ui.framework.action.ExportActionDefinition'
+          'command': 'export'
+          'icon': 'icon-export'
+          'availability': 
+            'rules': 
+              'IsNotDeletedRule': 
+                'implementationClass': 'info.magnolia.ui.framework.availability.IsNotDeletedRule'
+        'import': 
+          'class': 'info.magnolia.ui.framework.action.OpenCreateDialogActionDefinition'
+          'dialogName': 'ui-admincentral:import'
+          'icon': 'icon-import'
+          'availability': 
+            'root': true
+            'writePermissionRequired': true
+            'rules': 
+              'IsNotDeletedRule': 
+                'implementationClass': 'info.magnolia.ui.framework.availability.IsNotDeletedRule'
+      'actionbar': 
+        'sections': 
+          'root': 
+            'availability': 
+              'nodes': false
+              'root': true
+            'groups': 
+              'addActions': 
+                'items': 
+                  'addR-engine': 
+                  'addFolder': 
+              'editActions': 
+                'items': 
+              'publishingActions': 
+                'items': 
+                  'activate': 
+                  'activateRecursive': 
+                  'deactivate': 
+              'eximActions': 
+                'items': 
+                  'export': 
+                  'import': 
+          'folder': 
+            'availability': 
+              'nodeTypes': 
+                'folder': 'mgnl:folder'
+            'groups': 
+              'extends': '../../root/groups'
+              'editActions': 
+                'items': 
+                  'editFolder': 
+                  'delete': 
+          'r-engine': 
+            'availability': 
+              'nodeTypes': 
+                'r-engine': 'r-engine'
+            'groups': 
+              'extends': '../../root/groups'
+              'editActions': 
+                'items': 
+                  'editR-engine': 
+                  'renameR-engine': 
+                  'delete': 
+    'detail': 
+      'class': 'info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor'
+      'subAppClass': 'info.magnolia.ui.contentapp.detail.DetailSubApp'
+      'contentConnector': 
+        'extends': '../../browser/contentConnector'
+      'editor': 
+        'nodeType': 
+          'icon': 'icon-items'
+          'name': 'r-engine'
+        'form': 
+          'description': 'Define the r-engine information'
+          'tabs': 
+            'r-engine': 
+              'script': 
+                'class': 'info.magnolia.ui.form.field.definition.CheckboxFieldDefinition'
+              'fields': 
+                'name': 
+                  'class': 'info.magnolia.ui.form.field.definition.TextFieldDefinition'
+                  'name': 'jcrName'
+                'text': 
+                  'class': 'info.magnolia.ui.form.field.definition.CodeFieldDefinition'
+                  'language': 'r'
+                  'required': true
+                  'validators': 
+                  '_groovy': 
+                    'class': 'info.magnolia.module.groovy.validator.GroovyValidatorDefinition'
+                'r-consoleOutput': 
+                  'class': 'com.albertosoto.magnolia.bigdata.field.definition.ConsoleOutputFieldDefinition'
+        'actions': 
+          'commit': 
+          'cancel': 
+      'actions': 
+        'commit': 
+          'class': 'info.magnolia.ui.form.action.SaveFormActionDefinition'
+          'implementationClass': 'info.magnolia.ui.form.action.SaveFormAction'
+        'cancel': 
+          'class': 'info.magnolia.ui.form.action.CancelFormActionDefinition'
+    'console': 
+      'class': 'info.magnolia.ui.api.app.registry.ConfiguredSubAppDescriptor'
+      'closable': false
+      'subAppClass': 'com.albertosoto.magnolia.bigdata.console.RengineConsoleSubApp'
+
+

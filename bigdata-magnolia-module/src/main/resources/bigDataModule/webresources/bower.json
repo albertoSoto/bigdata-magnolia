@@ -1,0 +1,17 @@
+{
+  "name": "Magnolia big data template components",
+  "authors": [
+    "Alberto Soto <alberto.soto@gmail.com>"
+  ],
+  "description": "bigData web template requirements",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.albertosoto.magnolia.bigdata</groupId>
+        <artifactId>bigdata-magnolia</artifactId>
+        <version>3.2.2-SNAPSHOT</version>
+    </parent>
+    <artifactId>bigdata-magnolia-module</artifactId>
+    <packaging>jar</packaging>
+    <name>bigdata-magnolia-module</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>info.magnolia</groupId>
+            <artifactId>magnolia-core</artifactId>
+            <version>${magnoliaVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia</groupId>
+            <artifactId>magnolia-rendering</artifactId>
+            <version>${magnoliaVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia</groupId>
+            <artifactId>magnolia-templating</artifactId>
+            <version>${magnoliaVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia</groupId>
+            <artifactId>magnolia-templating-jsp</artifactId>
+            <version>${magnoliaVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.site</groupId>
+            <artifactId>magnolia-site</artifactId>
+            <version>${siteVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.site</groupId>
+            <artifactId>magnolia-site-app</artifactId>
+            <version>${siteVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.dam</groupId>
+            <artifactId>magnolia-dam-api</artifactId>
+            <version>${damVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.dam</groupId>
+            <artifactId>magnolia-dam-app</artifactId>
+            <version>${damVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.dam</groupId>
+            <artifactId>magnolia-dam-core</artifactId>
+            <version>${damVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.dam</groupId>
+            <artifactId>magnolia-dam-jcr</artifactId>
+            <version>${damVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.dam</groupId>
+            <artifactId>magnolia-dam-templating</artifactId>
+            <version>${damVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.blossom</groupId>
+            <artifactId>magnolia-module-blossom</artifactId>
+            <version>${blossomVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.imaging</groupId>
+            <artifactId>magnolia-imaging</artifactId>
+            <version>${imagingVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springVersion}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${springVersion}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- For @Valid - JSR-303 Bean Validation API -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>4.3.1.Final</version>
+        </dependency>
+
+
+        <!-- From project -->
+        <dependency>
+            <groupId>info.magnolia.groovy</groupId>
+            <artifactId>magnolia-groovy</artifactId>
+        </dependency>
+        <!-- OWN bd-mgnl -->
+        <dependency>
+            <groupId>info.magnolia.rest</groupId>
+            <artifactId>magnolia-rest-integration</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.rest</groupId>
+            <artifactId>magnolia-rest-tools</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.rest</groupId>
+            <artifactId>magnolia-rest-content-delivery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.rest</groupId>
+            <artifactId>magnolia-rest-services</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>info.magnolia.templating</groupId>
+            <artifactId>magnolia-jsonfn</artifactId>
+            <version>1.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20151123</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.8.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.8.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>2.8.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.renjin</groupId>
+            <artifactId>renjin-script-engine</artifactId>
+            <version>0.9.2643</version>
+           <!-- <classifier>jar-with-dependencies</classifier>-->
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Valid plugins -->
+        <dependency>
+            <!-- -->
+            <groupId>org.renjin.cran</groupId>
+            <artifactId>jsonlite</artifactId>
+            <version>1.5-b2</version>
+        </dependency>
+        <dependency>
+            <!--
+            Functions for downloading flight data from http://www.munich-airport.de and for analyzing flight patterns.
+            > data("airports", package = "MUCflights")
+            > head(airports)
+            > flight.info <- flights(from = "2011-01-07", to = "2011-01-08")
+            > head(flight.info)
+            -->
+            <groupId>org.renjin.cran</groupId>
+            <artifactId>MUCflights</artifactId>
+            <version>0.0-3-b38</version>
+        </dependency>
+        <!-- Lab Plugins -->
+        <dependency>
+            <!--
+            https://rstudio.github.io/reticulate/
+            http://packages.renjin.org/package/org.renjin.cran/reticulate/1.4
+            INTERPRETE VALIDO DE PYTHON EN R
+            library('org.renjin.cran:reticulate')
+            -->
+            <groupId>org.renjin.cran</groupId>
+            <artifactId>reticulate</artifactId>
+            <version>1.7-b1</version>
+        </dependency>
+        <dependency>
+            <!--
+            http://packages.renjin.org/package/org.renjin.cran/e1071
+            http://docs.renjin.org/en/latest/library/capture.html
+            -->
+            <groupId>org.renjin.cran</groupId>
+            <artifactId>e1071</artifactId>
+            <version>1.6-8-b34</version>
+        </dependency>
+        <dependency>
+            <!--
+            Indice Kappa
+            http://packages.renjin.org/package/org.renjin.cran/KappaGUI
+            http://packages.renjin.org/package/org.renjin.cran/KappaGUI/2.0.2/build/1#test-kappaCohen-examples
+            -->
+            <groupId>org.renjin.cran</groupId>
+            <artifactId>KappaGUI</artifactId>
+            <version>2.0.2-b1</version>
+        </dependency>
+        <dependency>
+            <!--
+            Indice Correlacion n dimensiones de Krippendorff
+            -->
+            <groupId>org.renjin.cran</groupId>
+            <artifactId>irr</artifactId>
+            <version>0.84-b243</version>
+        </dependency>
+        <!-- TEST -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${javaVersion}</source>
+                    <target>${javaVersion}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <!-- default resources configuration which will filter the module descriptor -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>META-INF/magnolia/*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+    <repositories>
+        <!-- R CRAN repository .. move to math module -->
+        <repository>
+            <id>bedatadriven</id>
+            <name>bedatadriven public repo</name>
+            <url>https://nexus.bedatadriven.com/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>magnolia.public</id>
+            <url>https://nexus.magnolia-cms.com/content/groups/public</url>
+            <snapshots>
+            </snapshots>
+        </repository>
+        <!-- IF YOU NEED MODULES FROM THE ENTERPRISE VERSION, UNCOMMENT THE FOLLOWING REPOSITORY -->
+        <!--
+        <repository>
+          <id>magnolia.enterprise.releases</id>
+          <url>https://nexus.magnolia-cms.com/content/repositories/magnolia.enterprise.releases</url>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        -->
+    </repositories>
+
+</project>
