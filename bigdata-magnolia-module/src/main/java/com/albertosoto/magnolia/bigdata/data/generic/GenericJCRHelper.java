@@ -27,7 +27,7 @@ import java.util.*;
  * Date: 26/09/12 14:25
  * Description:
  * <p>
- * Nueva posibilidad: Hacer uno nuevo para gestionar por ioc
+ * Legacy helper methods for JCR
  */
 public class GenericJCRHelper {
     private static final Logger log = LoggerFactory.getLogger(GenericJCRHelper.class);

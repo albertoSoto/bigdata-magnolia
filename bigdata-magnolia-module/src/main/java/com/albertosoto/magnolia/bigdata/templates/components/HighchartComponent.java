@@ -21,6 +21,8 @@ import javax.servlet.http.HttpSession;
  * com.deicos.magnolia.blossom.templates.components
  * Created by Alberto Soto Fernandez in 22/05/2017.
  * Description:
+ * Dummy component for highcharts that will load R data from rest
+ * TODO: By now, the script loaded is static, can be improved
  */
 @Controller
 @Template(title = "Highcharts BigData (Blossom)", id = "bigDataModule:components/highchart-bltk")

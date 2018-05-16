@@ -8,6 +8,7 @@ import java.util.HashMap;
  * com.deicos.magnolia.data
  * Created by Alberto Soto Fernandez in 19/05/2017.
  * Description:
+ * extends Enums usage
  */
 public class EnumStructure implements Serializable {
 

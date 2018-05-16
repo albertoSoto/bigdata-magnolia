@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
  * com.deicos.magnolia.spring.base
  * Created by Alberto Soto Fernandez in 22/05/2017.
  * Description:
+ * Common uses in spring rest controllers
  */
 public abstract class BdMagnoliaBaseController {
 

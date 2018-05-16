@@ -25,6 +25,7 @@ import javax.servlet.http.HttpSession;
  * com.deicos.magnolia.blossom.templates.components
  * Created by Alberto Soto Fernandez in 22/05/2017.
  * Description:
+ * Allows selecting and r-script and return the executed result in webclient output as raw data
  */
 @Controller
 @Template(title = "R-Script Result (Blossom)", id = "bigDataModule:components/rscript")

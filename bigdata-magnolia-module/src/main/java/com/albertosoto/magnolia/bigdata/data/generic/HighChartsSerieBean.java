@@ -4,6 +4,8 @@ package com.albertosoto.magnolia.bigdata.data.generic;
  * com.deicos.lince.math
  * Class HighChartsSerieBean
  * By berto. 24/04/2018
+ *
+ * Wrapper bean for highcharts, extendable to content2bean
  */
 public class HighChartsSerieBean {
     String name;

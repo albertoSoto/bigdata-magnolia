@@ -4,6 +4,8 @@ Demonstrates how to extend Magnolia CMS behaviour for bigdata and mathematical o
 
 Based on Magnolia 5.6
 
+![R-engine-arch](readme-info/magnoliaRules.jpg)
+
 ## Features
 > Java is and amazing language but it has several problems to analyze multidimensional data. That's why Python and R are "better" to resolve scientific problems. 
 
@@ -41,7 +43,7 @@ Based on Magnolia 5.6
 > Just compile the project and execute it as a magnolia bundle. 
 
 - Download the full project with maven and java 1.8 already installed in your computer
-- Execute "compile task"* (*You will see problems in the maven install task because it will try to remote install itself in Magnolia)
+- **Execute "compile task"*** (*You will see problems in the maven install task because it will try to remote install itself in Magnolia)
 - Deploy the generated war in your server
 - Works as a bundle. Copy the module into your project directly if you need it.
 

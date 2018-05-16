@@ -8,6 +8,7 @@ import java.util.List;
  * com.deicos.magnolia.data
  * Created by Alberto Soto Fernandez in 19/05/2017.
  * Description:
+ * Turns JSON response from spring rest into something more usable
  */
 public class DataTableWrapper<T> {
     List<T> data;

@@ -7,22 +7,22 @@
     <div class="row">
     [#if scriptContent??]
         <div class="col-md-6">
-                    <pre>
-                [#if scriptContent??]
-                [#list scriptContent as row]
-                        ${row!""}
-                [/#list]
-                [/#if]
-            </pre>
+<pre>
+[#if scriptContent??]
+[#list scriptContent as row]
+${row!""}
+[/#list]
+[/#if]
+</pre>
         </div>
         <div class="col-md-6">
-            <pre>
-                [#if result??]
-                [#list result as row]
-                ${row!""}
-                [/#list]
-                [/#if]
-            </pre>
+<pre>
+[#if result??]
+[#list result as row]
+${row!""}
+[/#list]
+[/#if]
+</pre>
         </div>
     [#else]
         <div class="col-md-12">

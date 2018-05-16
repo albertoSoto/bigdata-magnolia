@@ -12,6 +12,15 @@
     <name>bigdata-magnolia (parent pom)</name>
     <version>3.2.2-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <developers>
+        <developer>
+            <name>Alberto Soto Fernandez</name>
+            <email>alberto.soto@gmail.com</email>
+        </developer>
+    </developers>
+    <description>R lang integration into Magnolia CMS example using Spring MVC Rest points, Magnolia Rest points,
+        Magnolia Blossom techniques and Magnolia app with vaadin. Retos digitales by magnolia community 2018.
+    </description>
     <properties>
         <javaVersion>1.8</javaVersion>
         <magnoliaVersion>5.6</magnoliaVersion>

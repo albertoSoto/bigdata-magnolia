@@ -53,12 +53,10 @@ public class RengineConsoleSubApp extends BaseSubApp {
     @Override
     protected void onSubAppStart() {
         super.onSubAppStart();
-        //MgnlContext.setAttribute(RTerminal.BINDING_SESSION_ATTRIBUTE, new RTerminal.SerializableBinding(), Context.SESSION_SCOPE);
     }
 
     @Override
     protected void onSubAppStop() {
         super.onSubAppStop();
-       // MgnlContext.removeAttribute(RTerminal.BINDING_SESSION_ATTRIBUTE, Context.SESSION_SCOPE);
     }
 }

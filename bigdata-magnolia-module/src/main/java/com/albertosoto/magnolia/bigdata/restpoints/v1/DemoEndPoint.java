@@ -18,6 +18,8 @@ import java.util.List;
  * Class DemoEndPoint
  * By berto. 08/05/2018
  * <p>
+ *     Dummy hello world example for magnolia cms rest end points
+ *
  * https://documentation.magnolia-cms.com/display/DOCS56/How+to+create+a+custom+Java-based+REST+endpoint
  * https://documentation.magnolia-cms.com/display/DOCS56/REST+module
  */

@@ -29,6 +29,10 @@ import java.util.List;
  * com.deicos.lince.app.service
  * Created by Alberto Soto Fernandez in 10/08/2017.
  * Description:
+ *
+ * Basic service for Rengine.
+ * Can be improved!!!!
+ *
  * <p>
  * http://docs.renjin.org/en/latest/library/execution-context.html
  * <p>

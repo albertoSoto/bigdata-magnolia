@@ -10,6 +10,7 @@ import java.util.List;
  * com.deicos.lince.app.base.common
  * Created by Alberto Soto Fernandez in 11/04/2017.
  * Description:
+ * Wrapper bean for highcharts, extendable to content2bean
  */
 public class HighChartsWrapper {
     String title;

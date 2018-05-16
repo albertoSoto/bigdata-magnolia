@@ -22,7 +22,7 @@ import java.util.List;
  * Class RengineEndPoint
  * By berto. 10/05/2018
  * <p>
- * Rest end point via the magnolia way for r-script language
+ * Rest end point example via the magnolia way for r-script language
  */
 @Path("/r-engine/v1")
 public class RengineEndPoint<D extends EndpointDefinition> extends AbstractEndpoint<D> {
