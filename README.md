@@ -4,6 +4,8 @@ Demonstrates how to extend Magnolia CMS behaviour for bigdata and mathematical o
 
 Based on Magnolia 5.6
 
+![R-engine-winner](readme-info/badge.png)
+
 ![R-engine-arch](readme-info/magnoliaRules.jpg)
 
 ## Features
