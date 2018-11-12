@@ -24,7 +24,7 @@
     <properties>
         <checkstyle.skip>true</checkstyle.skip>
         <javaVersion>1.8</javaVersion>
-        <magnoliaVersion>5.6</magnoliaVersion>
+        <magnoliaVersion>5.7</magnoliaVersion>
         <damVersion>2.3</damVersion>
         <siteVersion>1.2</siteVersion>
         <imagingVersion>3.4</imagingVersion>
